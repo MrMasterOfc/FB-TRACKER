@@ -1,0 +1,30 @@
+{
+
+  "manifest_version": 2,
+  "name": "FBTrack",
+  "version": "1.0",
+
+  "description": "Tracks time spent on Facebook.",
+
+  "icons": {
+    "64": "icons/chrono.png"
+  },
+
+  "permissions": [
+    "activeTab", "storage"
+  ],
+
+  "browser_action": {
+    "default_icon": "icons/chrono.png",
+    "default_title": "FBTrack",
+    "default_popup": "popup.html"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://www.facebook.com/*"],
+      "js": ["main.js"]
+    }
+  ]
+
+}
